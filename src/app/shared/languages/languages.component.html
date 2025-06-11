@@ -1,0 +1,13 @@
+<section class="languages">
+    <div class="languages__list">
+        <div *ngFor="let lang of languages" class="language-bar">
+            <span class="language-bar__flag">{{ lang.flag }}</span>
+            <span class="language-bar__name">{{ lang.name }}</span>
+            <span class="language-bar__level">{{ lang.level }}</span>
+            <div class="language-bar__progress">
+                <div class="language-bar__fill" [style.width.%]="lang.percent"></div>
+            </div>
+            <span class="language-bar__percent">{{ lang.percent }}%</span>
+        </div>
+    </div>
+</section>

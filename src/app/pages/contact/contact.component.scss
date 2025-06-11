@@ -1,0 +1,214 @@
+.contact {
+  padding: 4rem 0.5rem; /* Réduit le padding général */
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4f8, #e0e7ee);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  margin: 1.5rem auto;
+  max-width: 1200px; /* Réduit la largeur maximale */
+}
+
+.contact__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.contact__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.contact__form {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  min-width: 280px;
+  max-width: 400px; /* Réduit la largeur maximale */
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact__form:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.contact__group {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact__input, .contact__textarea {
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 7px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+  background: #f7f7f7;
+  color: #333;
+}
+
+.contact__input:focus, .contact__textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+  background-color: #ffffff;
+  outline: none;
+}
+
+.contact__textarea {
+  min-height: 100px; /* Réduit la hauteur minimale */
+  resize: vertical;
+}
+
+.contact__btn {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  margin-top: 0.8rem;
+}
+
+.contact__btn:disabled {
+  background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.contact__btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+}
+
+.contact__info {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  min-width: 250px;
+  max-width: 400px; /* Réduit la largeur maximale */
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: stretch;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.contact__info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #2c3e50;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact__info-item:hover {
+  transform: translateX(4px);
+}
+
+.contact__info-item i {
+  font-size: 1.3rem;
+  color: #3498db;
+  min-width: 28px;
+  text-align: center;
+}
+
+.contact__info-item a {
+  color: #3498db;
+  margin-right: 1.2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.contact__info-item a:hover {
+  color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.contact__map {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact__map:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .contact__form, .contact__info {
+    min-width: unset;
+    max-width: 90vw;
+    padding: 1.5rem;
+  }
+  .contact__title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  .contact__group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact__btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  .contact__info-item {
+    font-size: 0.95rem;
+  }
+  .contact__info-item i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 0.8rem;
+  }
+  .contact__container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  .contact__form, .contact__info {
+    padding: 1.2rem;
+  }
+  .contact__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,122 @@
+.certificates {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.certificates__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1976d2;
+}
+
+.certificates__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.certificate-card {
+  width: 260px;
+  height: 200px;
+  perspective: 1200px;
+}
+.certificate-card__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.7s cubic-bezier(.25,.8,.25,1);
+  transform-style: preserve-3d;
+}
+.certificate-card:hover .certificate-card__inner {
+  transform: rotateY(180deg);
+}
+.certificate-card__front, .certificate-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1rem;
+}
+.certificate-card__front {
+  z-index: 2;
+}
+.certificate-card__icon {
+  font-size: 2.2rem;
+  color: #1976d2;
+  margin-bottom: 0.7rem;
+}
+.certificate-card__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-bottom: 0.3rem;
+}
+.certificate-card__platform {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.2rem;
+}
+.certificate-card__date {
+  font-size: 0.98rem;
+  color: #888;
+}
+.certificate-card__back {
+  transform: rotateY(180deg);
+  z-index: 1;
+  background: #f5f7fa;
+  justify-content: flex-start;
+  padding-top: 1.5rem;
+}
+.certificate-card__skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+.certificate-card__skill {
+  background: #1976d2;
+  color: #fff;
+  border-radius: 0.7rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  margin-bottom: 0.2rem;
+}
+.certificate-card__btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  display: inline-block;
+}
+.certificate-card__btn:hover {
+  background: #125699;
+}
+
+@media (max-width: 900px) {
+  .certificates__grid {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .certificate-card {
+    width: 95vw;
+    max-width: 320px;
+  }
+}

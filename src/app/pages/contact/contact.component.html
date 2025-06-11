@@ -1,0 +1,41 @@
+<section class="contact">
+  <div class="contact__container">
+    <h2 class="contact__title">Contact Me</h2>
+    <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="contact__input-group">
+        <input type="text" formControlName="name" required placeholder="Name" class="contact__input" />
+        <input type="email" formControlName="email" required placeholder="Email" class="contact__input" />
+      </div>
+      <div class="contact__input-group">
+        <input type="text" formControlName="subject" required placeholder="Subject" class="contact__input" />
+      </div>
+      <div class="contact__input-group">
+        <textarea formControlName="message" required placeholder="Your message..." class="contact__textarea"></textarea>
+      </div>
+      <button type="submit" class="contact__btn" [disabled]="!contactForm.valid || sending">
+        <span *ngIf="!sending && !submitted">Send Message</span>
+        <span *ngIf="sending">Sending...</span>
+        <span *ngIf="submitted">Message Sent!</span>
+      </button>
+    </form>
+    <div class="contact__info">
+      <div class="contact__info-item"><i class="fa-solid fa-envelope"></i> {{ info.email }}</div>
+      <div class="contact__info-item"><i class="fa-solid fa-phone"></i> {{ info.phone }}</div>
+      <div class="contact__info-item"><i class="fa-solid fa-location-dot"></i> {{ info.location }}</div>
+      <div class="contact__info-item">
+        <a [href]="info.linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.facebook.com/profile.php?id=100004474756575" target="blank">
+          <i class="fa-brands fa-facebook"></i>Facebook
+        </a>
+        <a href="https://www.instagram.com/chiheb_benammar/" target="blank">
+          <i class="fa-brands fa-instagram"></i>Instagram
+        </a>
+
+      </div>
+      <div class="contact__map">
+        <iframe src="https://www.google.com/maps?q=Msaken+Sousse+Tunisie&output=embed" width="100%" height="180"
+          style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

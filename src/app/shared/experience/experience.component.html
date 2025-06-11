@@ -1,0 +1,44 @@
+<section class="timeline">
+  <div class="timeline__container">
+    <div *ngFor="let exp of filteredExperiences; let i = index" class="timeline__item visible">
+      <div class="timeline__dot"></div>
+      <div class="timeline__content">
+        <div class="timeline__header">
+          <h3 class="timeline__company">{{ exp.company }}</h3>
+          <span class="timeline__period">{{ exp.period }}</span>
+        </div>
+        <div class="timeline__role">{{ exp.role }}</div>
+        <div class="timeline__desc">{{ exp.description }}</div>
+        <div class="timeline__stack">
+          <span *ngFor="let tech of exp.stack" class="timeline__badge" [style.background]="tech.color">
+            <i [class]="tech.icon"></i> {{ tech.name }}
+          </span>
+        </div>
+        <div *ngIf="exp.image" class="timeline__img-wrap">
+          <img [src]="exp.image" alt="{{ exp.company }}" class="timeline__img" />
+        </div>
+        <div *ngIf="exp.type === 'project'" class="experience__actions">
+          <button *ngIf="exp.mediaUrl" (click)="openExperienceMedia(exp)" class="experience__btn experience__btn--demo">
+            <i class="fa-solid fa-play"></i>
+            Voir la Démo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="media-modal" *ngIf="selectedExperience">
+  <div class="media-modal__content">
+    <button class="media-modal__close" (click)="closeModal()">&times;</button>
+    <h3 class="media-modal__title">{{ selectedExperience.company }}</h3>
+    <div class="media-modal__media">
+      <video *ngIf="selectedExperience.mediaType === 'video'" controls class="media-modal__video">
+        <source [src]="selectedExperience.mediaUrl" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img *ngIf="selectedExperience.mediaType === 'image'" [src]="selectedExperience.mediaUrl"
+        [alt]="selectedExperience.company" class="media-modal__image" />
+    </div>
+  </div>
+</div>

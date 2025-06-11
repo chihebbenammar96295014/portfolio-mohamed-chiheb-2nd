@@ -1,0 +1,21 @@
+<section class="certificates">
+   
+    <div class="certificates__grid">
+        <div *ngFor="let cert of certificates" class="certificate-card">
+            <div class="certificate-card__inner">
+                <div class="certificate-card__front">
+                    <div class="certificate-card__icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3 class="certificate-card__name">{{ cert.name }}</h3>
+                    <div class="certificate-card__platform">{{ cert.platform }}</div>
+                    <div class="certificate-card__date">{{ cert.date }}</div>
+                </div>
+                <div class="certificate-card__back">
+                    <div class="certificate-card__skills">
+                        <span *ngFor="let skill of cert.skills" class="certificate-card__skill">{{ skill }}</span>
+                    </div>
+                    <a [href]="cert.url" target="_blank" class="certificate-card__btn">Voir le certificat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,364 @@
+.timeline {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.timeline__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1976d2;
+}
+
+.timeline__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 700px;
+  padding-left: 2rem;
+  border-left: 3px solid #1976d2;
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 3.5rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.25, .8, .25, 1), transform 0.7s cubic-bezier(.25, .8, .25, 1);
+}
+
+.timeline__item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline__dot {
+  position: absolute;
+  left: -1.35rem;
+  top: 1.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #fff;
+  border: 3px solid #1976d2;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+}
+
+.timeline__content {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.07);
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  text-align: left;
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.timeline__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.timeline__company {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1976d2;
+}
+
+.timeline__period {
+  font-size: 0.98rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.timeline__role {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.timeline__desc {
+  font-size: 0.98rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+}
+
+.timeline__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.timeline__badge {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 0.7rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  transition: background 0.2s;
+}
+
+.timeline__badge i {
+  font-size: 1.1rem;
+}
+
+.timeline__img-wrap {
+  margin-top: 0.7rem;
+  text-align: center;
+}
+
+.timeline__img {
+  max-width: 180px;
+  border-radius: 0.7rem;
+  box-shadow: 0 6px 16px rgba(25, 118, 210, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(25, 118, 210, 0.25);
+  }
+}
+
+@media (max-width: 800px) {
+  .timeline__container {
+    padding-left: 1rem;
+    max-width: 98vw;
+  }
+
+  .timeline__content {
+    padding: 1rem 0.7rem 1.2rem 0.7rem;
+  }
+}
+
+.media-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+
+  &__content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #1976d2;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    color: #1976d2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__video,
+  &__image {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+  }
+}
+
+.experience {
+  &__item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__img-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    flex-grow: 1;
+  }
+
+  &__company {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 0.3rem;
+  }
+
+  &__period {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  &__role {
+    color: #444;
+    font-weight: 500;
+  }
+
+  &__desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #1976d2;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    i {
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      background: darken(#1976d2, 10%);
+      transform: translateY(-2px);
+    }
+
+    &--demo {
+      background: #1976d2;
+      color: white;
+
+      &:hover {
+        background: darken(#1976d2, 10%);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    &__img-wrap {
+      width: 60px;
+      height: 60px;
+    }
+
+    &__company {
+      font-size: 1.2rem;
+    }
+  }
+
+  .media-modal {
+    &__content {
+      width: 95%;
+      padding: 0.5rem;
+    }
+
+    &__close {
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<section class="projects">
+  <div class="projects__header">
+    <h2 class="projects__title">My Projects</h2>
+    <p class="projects__subtitle">Discover my achievements and development experiences</p>
+  </div>
+
+  <div class="projects__filters">
+    <button *ngFor="let cat of categories" (click)="setFilter(cat)" [class.active]="filter === cat" class="filter-btn">
+      <i [class]="getCategoryIcon(cat)"></i>
+      {{ cat | titlecase }}
+    </button>
+  </div>
+
+  <div class="projects__grid">
+    <div *ngFor="let project of filteredProjects; let i = index" class="project-card"
+      [style.animationDelay]="(i * 0.1)+'s'">
+
+      <div class="project-card__media">
+        <div class="project-card__img-wrap">
+          <img [src]="project.image" [alt]="project.title" class="project-card__img" />
+        </div>
+        <div class="project-card__categories">
+          <span *ngFor="let category of project.categories" class="project-card__category">
+            {{ category | titlecase }}
+          </span>
+        </div>
+      </div>
+
+      <div class="project-card__content">
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__desc">{{ project.description }}</p>
+
+        <div class="project-card__stack">
+          <span *ngFor="let tech of project.stack" class="project-card__badge" [style.background]="tech.color">
+            <i [class]="tech.icon"></i>
+            {{ tech.name }}
+          </span>
+        </div>
+
+        <div class="project-card__actions">
+
+
+          <button *ngIf="project.mediaUrl" (click)="openProjectMedia(project)"
+            class="project-card__btn project-card__btn--demo">
+            <i class="fa-solid fa-play"></i>
+            View Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="media-modal" *ngIf="selectedProject">
+  <div class="media-modal__content">
+    <button class="media-modal__close" (click)="closeModal()">&times;</button>
+    <h3 class="media-modal__title">{{ selectedProject.title }}</h3>
+    <div class="media-modal__media">
+      <video *ngIf="selectedProject.mediaType === 'video'" controls class="media-modal__video">
+        <source [src]="selectedProject.mediaUrl" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img *ngIf="selectedProject.mediaType === 'image'" [src]="selectedProject.mediaUrl" [alt]="selectedProject.title"
+        class="media-modal__image" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<section class="home-hero">
+  <div class="home-hero__content">
+    <h1 class="home-hero__title">{{ heroMsg }}</h1>
+    <h2 class="home-hero__subtitle">{{ title }}</h2>
+    <div class="home-hero__actions">
+      <a routerLink="/projects" class="home-hero__btn">View My Projects</a>
+      <a [href]="cvUrl" target="_blank" class="home-hero__btn home-hero__btn--outline">Download My CV</a>
+    </div>
+  </div>
+  <div class="home-hero__profile">
+    <img [src]="profileImg" alt="Profile Picture" class="home-hero__img" />
+  </div>
+</section>
+
+
+
+<app-skills></app-skills>
