@@ -1,18 +1,21 @@
 <section class="contact">
   <div class="contact__container">
     <h2 class="contact__title">Contact Me</h2>
-    <form class="contact__form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="contact__form" (ngSubmit)="onSubmit()" #f="ngForm">
       <div class="contact__input-group">
-        <input type="text" formControlName="name" required placeholder="Name" class="contact__input" />
-        <input type="email" formControlName="email" required placeholder="Email" class="contact__input" />
+        <input type="text" name="name" [(ngModel)]="contact.name" required placeholder="Name" class="contact__input" />
+        <input type="email" name="email" [(ngModel)]="contact.email" required placeholder="Email"
+          class="contact__input" />
       </div>
       <div class="contact__input-group">
-        <input type="text" formControlName="subject" required placeholder="Subject" class="contact__input" />
+        <input type="text" name="subject" [(ngModel)]="contact.subject" required placeholder="Subject"
+          class="contact__input" />
       </div>
       <div class="contact__input-group">
-        <textarea formControlName="message" required placeholder="Your message..." class="contact__textarea"></textarea>
+        <textarea name="message" [(ngModel)]="contact.message" required placeholder="Your message..."
+          class="contact__textarea"></textarea>
       </div>
-      <button type="submit" class="contact__btn" [disabled]="!contactForm.valid || sending">
+      <button type="submit" class="contact__btn" [disabled]="sending || submitted">
         <span *ngIf="!sending && !submitted">Send Message</span>
         <span *ngIf="sending">Sending...</span>
         <span *ngIf="submitted">Message Sent!</span>
@@ -30,7 +33,6 @@
         <a href="https://www.instagram.com/chiheb_benammar/" target="blank">
           <i class="fa-brands fa-instagram"></i>Instagram
         </a>
-
       </div>
       <div class="contact__map">
         <iframe src="https://www.google.com/maps?q=Msaken+Sousse+Tunisie&output=embed" width="100%" height="180"
