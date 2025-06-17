@@ -1,24 +1,20 @@
 <section class="contact">
+  <h2 class="contact__title">Contact Me</h2>
   <div class="contact__container">
-    <h2 class="contact__title">Contact Me</h2>
     <form class="contact__form" (ngSubmit)="onSubmit()" #f="ngForm">
-      <div class="contact__input-group">
+      <div class="contact__group">
         <input type="text" name="name" [(ngModel)]="contact.name" required placeholder="Name" class="contact__input" />
         <input type="email" name="email" [(ngModel)]="contact.email" required placeholder="Email"
           class="contact__input" />
       </div>
-      <div class="contact__input-group">
-        <input type="text" name="subject" [(ngModel)]="contact.subject" required placeholder="Subject"
-          class="contact__input" />
-      </div>
-      <div class="contact__input-group">
-        <textarea name="message" [(ngModel)]="contact.message" required placeholder="Your message..."
-          class="contact__textarea"></textarea>
-      </div>
+      <input type="text" name="subject" [(ngModel)]="contact.subject" required placeholder="Subject"
+        class="contact__input" />
+      <textarea name="message" [(ngModel)]="contact.message" required placeholder="Your message..."
+        class="contact__textarea"></textarea>
       <button type="submit" class="contact__btn" [disabled]="sending || submitted">
-        <span *ngIf="!sending && !submitted">Send Message</span>
+        <span *ngIf="!sending && !submitted">Send</span>
         <span *ngIf="sending">Sending...</span>
-        <span *ngIf="submitted">Message Sent!</span>
+        <span *ngIf="submitted">Thank you!</span>
       </button>
     </form>
     <div class="contact__info">
