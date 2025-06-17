@@ -32,10 +32,10 @@ export class ProjectsComponent implements OnInit {
         { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#f7df1e' }
       ],
       github: '#',
-      demo: '../../../assets/workWave/video workWave.mp4',
+      demo: '../../../assets/workWave/video-workWave.mp4',
       categories: ['web'],
       mediaType: 'video',
-      mediaUrl: '../../../assets/workWave/video workWave.mp4'
+      mediaUrl: '../../../assets/workWave/video-workWave.mp4'
     },
     {
       title: 'Medical Appointment Chatbot',

@@ -70,7 +70,7 @@ export class ExperienceComponent implements OnInit {
       image: '/assets/workWave/logo.png',
       type: 'project',
       mediaType: 'video',
-      mediaUrl: '/assets/workWave/video workWave.mp4'
+      mediaUrl: '/assets/workWave/video-workWave.mp4'
     },
     {
       company: 'Projet Medical Chatbot',
