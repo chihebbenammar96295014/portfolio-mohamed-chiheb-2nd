@@ -15,7 +15,7 @@ export class HomeComponent {
   name = 'Mohamed Chiheb Eddine Benammar';
   title = '2nd Year Computer Engineering Student– Software Engineering ';
   heroMsg = 'I am Mohamed Chiheb, a Passionate Full Stack Developer.';
-  profileImg = 'assets/photo-profile.jpeg'; // To be placed in assets/img/
+  profileImg = '/assets/photo-profile.jpeg'; // To be placed in assets/
   cvUrl = 'assets/cv -mohamed-chiheb.pdf'; // Link to the CV PDF
   clients: ClientLogo[] = [
     { name: 'Microsoft', url: '#', img: 'assets/img/client-microsoft.png' },

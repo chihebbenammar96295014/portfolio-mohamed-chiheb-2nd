@@ -40,7 +40,7 @@ export class ExperienceComponent implements OnInit {
         { name: 'Spring Boot', icon: 'fa-solid fa-leaf', color: '#6db33f' },
         { name: 'Java', icon: 'fa-brands fa-java', color: '#007396' }
       ],
-      image: './../../../assets/exp-satoripop.png',
+      image: '/assets/exp-satoripop.png',
       type: 'stage'
     },
     {
@@ -52,7 +52,7 @@ export class ExperienceComponent implements OnInit {
         { name: 'Qt', icon: 'fa-solid fa-cube', color: '#41cd52' },
         { name: 'C++', icon: 'fa-solid fa-code', color: '#00599c' }
       ],
-      image: '../../../assets/exp-avionav.png',
+      image: '/assets/exp-avionav.png',
       type: 'stage'
     },
     {
@@ -67,10 +67,10 @@ export class ExperienceComponent implements OnInit {
         { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: '#1572b6' },
         { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#f7df1e' }
       ],
-      image: '../../../assets/workWave/logo.png',
+      image: '/assets/workWave/logo.png',
       type: 'project',
       mediaType: 'video',
-      mediaUrl: '../../../assets/workWave/video workWave.mp4'
+      mediaUrl: '/assets/workWave/video workWave.mp4'
     },
     {
       company: 'Projet Medical Chatbot',
@@ -83,10 +83,10 @@ export class ExperienceComponent implements OnInit {
         { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' },
         { name: 'Rasa', icon: 'fa-solid fa-robot', color: '#5d5dff' }
       ],
-      image: '../../../assets/consultEase/consultEase-home.png',
+      image: '/assets/consultEase/consultEase-home.png',
       type: 'project',
       mediaType: 'video',
-      mediaUrl: '../../../assets/consultEase/video-consultEase.mp4'
+      mediaUrl: '/assets/consultEase/video-consultEase.mp4'
     },
     {
       company: 'Projet Tic-Tac-Toe Game',
@@ -96,10 +96,10 @@ export class ExperienceComponent implements OnInit {
       stack: [
         { name: 'Python', icon: 'fa-brands fa-python', color: '#3776ab' }
       ],
-      image: '../../../assets/jeux xo/jeuxo.png',
+      image: '/assets/jeux xo/jeuxo.png',
       type: 'project',
       mediaType: 'video',
-      mediaUrl: '../../../assets/jeux xo/jeu XO.mp4'
+      mediaUrl: '/assets/jeux xo/jeu XO.mp4'
     },
     {
       company: 'Projet Site ENISO',
@@ -112,10 +112,10 @@ export class ExperienceComponent implements OnInit {
         { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: '#1572b6' },
         { name: 'JavaScript', icon: 'fa-brands fa-js', color: '#f7df1e' }
       ],
-      image: '../../../assets/Eniso-Team/logo.png',
+      image: '/assets/Eniso-Team/logo.png',
       type: 'project',
       mediaType: 'video',
-      mediaUrl: '../../../assets/Eniso-Team/magazin_eniso.mp4'
+      mediaUrl: '/assets/Eniso-Team/magazin_eniso.mp4'
     },
     {
       company: 'Data Analysis Project',
@@ -128,10 +128,10 @@ export class ExperienceComponent implements OnInit {
         { name: 'Matplotlib', icon: 'fa-solid fa-chart-line', color: '#11557c' },
         { name: 'Seaborn', icon: 'fa-solid fa-water', color: '#43b7ba' }
       ],
-      image: '../../../assets/analyse/photo-analyse.png',
+      image: '/assets/analyse/photo-analyse.png',
       type: 'project',
       mediaType: 'image',
-      mediaUrl: '../../../assets/analyse/photo-analyse.png'
+      mediaUrl: '/assets/analyse/photo-analyse.png'
     },
     {
       company: 'Speed Interface for Aircraft',
@@ -142,10 +142,10 @@ export class ExperienceComponent implements OnInit {
         { name: 'Qt', icon: 'fa-solid fa-cube', color: '#41cd52' },
         { name: 'C++', icon: 'fa-solid fa-code', color: '#00599c' }
       ],
-      image: '../../../assets/avionav-speed/avionav.png',
+      image: '/assets/avionav-speed/avionav.png',
       type: 'project',
       mediaType: 'image',
-      mediaUrl: '../../../assets/avionav-speed/avionav.png'
+      mediaUrl: '/assets/avionav-speed/avionav.png'
     }
   ];
 
